@@ -3,6 +3,9 @@
 // Reference (Address) of a nested Array or nested Object is same
 // So changing nested Array or Object, Original Array is also changed.
 // Nested Array / Object share the same memory so appear the changes both side.
+// Not support functions - remove, undefined - remove, Date - convert into the String
+
+// one line -  Share the references of Nested Object and Array.
 
 // Spread Operator {...obj}
 let obj = {
