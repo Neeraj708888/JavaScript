@@ -27,5 +27,5 @@ function findAnyLargest (arr, position) {
   return largest;
 }
 
-console.log(findAnyLargest([12,4,13,6,10,14], 1));
+console.log(findAnyLargest([12,4,13,6,10,14], 2));
 // [4,6,10,12,13,14]
