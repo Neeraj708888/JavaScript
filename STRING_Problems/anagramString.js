@@ -1,8 +1,8 @@
 // Samae Letter + Same Count + Different Order = Anagram Strings ["Listen" & "Silent"]
 
 // From using Array
-function anagram (str1, str2) {
-    if (str1.length !== str2.length) return false;
+function anagram(str1, str2) {
+    if (str1.length !== str2.length) return false;  // Base case check
 
     let arr1 = str1.toLowerCase().split('').sort().join('');
     let arr2 = str2.toLowerCase().split('').sort().join('');
@@ -13,7 +13,7 @@ function anagram (str1, str2) {
 console.log(anagram("Listen", "Silent")); // true
 
 // From using Object
-function anagramStrings (str1, str2) {
+function anagramStrings(str1, str2) {
     if (str1.length !== str2.length) return false;
 
     let charCount = {};
@@ -25,7 +25,7 @@ function anagramStrings (str1, str2) {
     for (let ch of str2.toLowerCase()) {
         if (!charCount[ch]) {
             return false;
-        } 
+        }
 
         charCount[ch]--;
     }
