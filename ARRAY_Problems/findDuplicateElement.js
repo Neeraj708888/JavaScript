@@ -33,4 +33,40 @@ function findDuplicate(arr) {
 
 
 let arr = [1, 2, 3, 1, 1, 2, 2, 3, 3, 4, 5, 6, 4, 4, 5, 5];
-findDuplicate(arr);
+findDuplicate(arr); 
+
+function findDuplicates (arr) {
+    let l = arr.length, duplicates = [], index = 0;
+
+    for (let i = 0; i < l; i++) {
+
+        for (let j = i + 1; j < l; j++) {
+
+            if (arr[i] === arr[j]) {
+
+                isAlreadyAdded = false;
+
+                for (let k = 0; k < index; k++) {
+
+                    if (arr[k] === arr[i]) {
+
+                        isAlreadyAdded = true;
+                        break;
+
+                    }
+                }
+
+                if (!isAlreadyAdded) {
+
+                    duplicates[index++] = arr[i];
+
+                }
+            }
+        }
+    }
+
+    return duplicates;
+}
+
+// let arr = [2,3,3,4,5,6,6,7,7];
+// console.log(findDuplicates(arr));
